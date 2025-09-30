@@ -1,0 +1,55 @@
+
+
+:root {
+    --primary-color: #007bffff;
+    --background-color: #7b8b93d1;
+}
+
+*{
+    background-color: beige;
+}
+
+h1 {
+    border: var(--background-color);
+    filter: blur(3px);
+    border-radius: 10px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+h1:hover {
+    filter: blur(0px);
+    border-radius: 50%;
+}
+
+ @keyframes slide {
+  0% { transform: translateY(0vh) translateX(0dvh); border-radius: 50%; }
+  50% { transform: translateX(calc(100vw - 40px));}
+  100%   { transform: rotate(180deg) translateY(0dvh);
+border-radius: 50%; }
+}
+
+.box{
+    border: 1px solid blue;
+    height: 25px;
+    width: 25px;
+    animation: slide infinite 5s;
+    background-color: var(--background-color);
+
+}
+
+.box:nth-child(1){animation-delay: .25s; left: 10px;}
+.box:nth-child(2){animation-delay: .5s; left: 10px;}
+.box:nth-child(3){animation-delay: .75s; left: 10px;}
+.box:nth-child(4){animation-delay: 1s; left: 10px;}
+.box:nth-child(5){animation-delay: 1.25s; left: 10px;}
+.box:nth-child(6){animation-delay: 1.5s; left: 10px;}
+.box:nth-child(7){animation-delay: 1.75s; left: 10px;}
+.box:nth-child(8){animation-delay: 2s; left: 10px;}
+.box:nth-child(9){animation-delay: 2.25s; left: 10px;}
+.box:nth-child(10){animation-delay: 2.5s; left: 10px;}
